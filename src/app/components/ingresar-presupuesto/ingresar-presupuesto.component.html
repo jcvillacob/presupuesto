@@ -6,7 +6,7 @@
                 <div *ngIf="cantidadIncorrecta" class="text-center mb-3">
                     <span class="badge bg-danger textError">EL PRESUPUESTO DEBE SER MAYOR A 0</span>
                 </div>
-                <input type="number" [(ngModel)]="cantidad" class="form-control form-control-lg" placeholder="Ingrese su Presupuesto...">
+                <input type="number" [(ngModel)]="cantidad" class="form-control form-control-lg" (keyup.enter)="agregar()" placeholder="Ingrese su Presupuesto...">
                 <button class="btn btn-secondary btn-lg btn-block mt-2" (click)="agregar()">ACEPTAR</button>
             </div>
         </div>
